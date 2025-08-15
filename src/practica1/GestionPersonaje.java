@@ -73,18 +73,18 @@ public class GestionPersonaje {
 	}
 
 	public static void agregarPersonaje() {
-		
+
 		System.out.println("estamos en agregar personaje");
-		
+
 		int a, b, c = 0;
 
 		String nombrepersonaje = "";
-		
-		String armadelpersonaje="";
-		
-		String habilidadesdelpersonaje="";
-		
-		int niveldepoder=0;
+
+		String armadelpersonaje = "";
+
+		String habilidadesdelpersonaje = "";
+
+		int niveldepoder = 0;
 
 		Scanner t = new Scanner(System.in);
 
@@ -93,45 +93,46 @@ public class GestionPersonaje {
 		nombrepersonaje = t.nextLine();
 
 		System.out.println("Ingrese arma del personaje");
-		
-		armadelpersonaje= t.nextLine();
-		
-		System.out.println("Ingrese habilidad del personaje");
-		
-		habilidadesdelpersonaje= t.nextLine();
-		
-		
+
+		armadelpersonaje = t.nextLine();
+
+
+		Scanner scanner = new Scanner(System.in);
+
+		String[] habilidades = new String[5];
+
+		for (int i = 0; i < habilidades.length; i++) {
+
+			System.out.println("Ingrese hablidad");
+
+			habilidades[i] = scanner.nextLine();
+
+		}
+
+		for (int i = 0; i < habilidades.length; i++) {
+
+			System.out.println("habilidad " + i);
+			System.out.println(habilidades[i]);
+
+		}
+
 		System.out.println("Ingrese el nivel de poder");
-		
-		niveldepoder= t.nextInt();
-		
+
+		niveldepoder = t.nextInt();
+
 		System.out.println("Se ha ingresado el personaje con la siguiente informacion");
-		
-		
-		System.out.println("Nombre: " + nombrepersonaje );
-		
+
+		System.out.println("Nombre: " + nombrepersonaje);
+
 		System.out.println("Arma: " + armadelpersonaje);
-		
-		System.out.println("Habilidades:" + habilidadesdelpersonaje );
-		
-		System.out.println("Nivel de poder: " + niveldepoder );
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-	
+
+		System.out.println("Habilidades:" + habilidadesdelpersonaje);
+
+		System.out.println("Nivel de poder: " + niveldepoder);
 
 	}
 
 	public static void modificarPersonaje()
-	
-	
 
 	{
 
@@ -178,7 +179,7 @@ public class GestionPersonaje {
 	{
 		System.out.println("Estudiante");
 		System.out.println("Nombre: Lorena Abigail Arrecis Martinez");
-		
+
 		System.out.println("Carnet: 202112134");
 
 	}
