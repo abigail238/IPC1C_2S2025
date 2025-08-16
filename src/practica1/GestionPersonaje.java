@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class GestionPersonaje {
 
+	public static Personaje[] personajes = new Personaje[10];
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		System.out.println("mi primera practica");
@@ -76,8 +78,6 @@ public class GestionPersonaje {
 
 		System.out.println("estamos en agregar personaje");
 
-		int a, b, c = 0;
-
 		String nombrepersonaje = "";
 
 		String armadelpersonaje = "";
@@ -96,7 +96,6 @@ public class GestionPersonaje {
 
 		armadelpersonaje = t.nextLine();
 
-
 		Scanner scanner = new Scanner(System.in);
 
 		String[] habilidades = new String[5];
@@ -109,16 +108,14 @@ public class GestionPersonaje {
 
 		}
 
-		for (int i = 0; i < habilidades.length; i++) {
-
-			System.out.println("habilidad " + i);
-			System.out.println(habilidades[i]);
-
-		}
-
 		System.out.println("Ingrese el nivel de poder");
 
 		niveldepoder = t.nextInt();
+
+		if (niveldepoder <= 0)
+			System.out.println("Nivel de poder no permitido");
+		else if (niveldepoder > 100)
+			System.out.println("Nivel de poder no permitido");
 
 		System.out.println("Se ha ingresado el personaje con la siguiente informacion");
 
@@ -126,9 +123,29 @@ public class GestionPersonaje {
 
 		System.out.println("Arma: " + armadelpersonaje);
 
-		System.out.println("Habilidades:" + habilidadesdelpersonaje);
+		System.out.println("Habilidades");
+		for (int i = 0; i < habilidades.length; i++) {
+			System.out.println(habilidades[i]);
+		}
 
 		System.out.println("Nivel de poder: " + niveldepoder);
+
+		Personaje nuevoPersonaje = new Personaje();
+
+		nuevoPersonaje.nombre = nombrepersonaje;
+		nuevoPersonaje.arma = armadelpersonaje;
+		nuevoPersonaje.habilidades = habilidades;
+		nuevoPersonaje.nivelDePoder = niveldepoder;
+
+		for (int i = 0; i < personajes.length; i++) {
+
+			if (personajes[i] == null) { // == es para comparar y nuell es cuando no hay nada adentro
+
+				personajes[i] = nuevoPersonaje; // if:si osea es una condicional
+				break;
+
+			}
+		}
 
 	}
 
@@ -157,6 +174,20 @@ public class GestionPersonaje {
 
 	{
 		System.out.println("estamos en listado de personajes");
+
+		for (int i = 0; i < personajes.length; i++) {
+
+			if (personajes[i] != null) {
+
+				System.out.println("personaje: " + (i + 1));
+
+				System.out.println("Nombre: " + personajes[i].nombre);
+				System.out.println("Arma: " + personajes[i].arma);
+				System.out.println("habilidades: " + personajes[i].habilidades);
+				System.out.println("poder: " + personajes[i].nivelDePoder);
+
+			}
+		}
 
 	}
 
