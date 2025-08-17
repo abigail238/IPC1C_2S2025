@@ -74,7 +74,7 @@ public class GestionPersonaje {
 
 	}
 
-	public static void agregarPersonaje() {
+	public static void agregarPersonaje() {    //metodo se define como() {} 
 
 		System.out.println("estamos en agregar personaje");
 
@@ -102,7 +102,7 @@ public class GestionPersonaje {
 
 		for (int i = 0; i < habilidades.length; i++) {
 
-			System.out.println("Ingrese hablidad");
+			System.out.println("Ingreseablidad" );
 
 			habilidades[i] = scanner.nextLine();
 
@@ -175,16 +175,16 @@ public class GestionPersonaje {
 	{
 		System.out.println("estamos en listado de personajes");
 
-		for (int i = 0; i < personajes.length; i++) {
+		for (int i=3; i>0; i--) {
 
-			if (personajes[i] != null) {
+			if (personajes[3] != null) {
 
-				System.out.println("personaje: " + (i + 1));
+				System.out.println("personaje: " + (i +1));
 
-				System.out.println("Nombre: " + personajes[i].nombre);
-				System.out.println("Arma: " + personajes[i].arma);
-				System.out.println("habilidades: " + personajes[i].habilidades);
-				System.out.println("poder: " + personajes[i].nivelDePoder);
+				System.out.println("Nombre: " + personajes[3].nombre);
+				System.out.println("Arma: " + personajes[2].arma);
+				System.out.println("habilidades: " + personajes[1].habilidades);
+				System.out.println("poder: " + personajes[0].nivelDePoder);
 
 			}
 		}
